@@ -5,17 +5,19 @@
 # Run after installing Ubuntu Server (64) in Virtualbox
 ################################################
 
+# Don't require a password on login
 sudo usermod -a -G nopasswdlogin `whoami`
+
+# Automatically login user flowlog (via config file being copied)
+sudo cp 50-flowlog.conf /etc/lightdm/lightdm.conf.d
 
 echo -e "\nulimit -c unlimited\n" >> ~/.bashrc
 echo -e "\nulimit -n 2048\n" >> ~/.bashrc
 
-
 set -e
 
-# removed for debugging --- only run once
-#echo `whoami` ALL=NOPASSWD: ALL | sudo tee -a /etc/sudoers
-#sudo sed -i -e 's/Default/#Default/' /etc/sudoers
+echo `whoami` ALL=NOPASSWD: ALL | sudo tee -a /etc/sudoers
+sudo sed -i -e 's/Default/#Default/' /etc/sudoers
 
 sudo apt-get update
 sudo apt-get -y install xubuntu-desktop
@@ -60,8 +62,7 @@ wget http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3059_amd64.deb
 sudo dpkg -i sublime-text_build-3059_amd64.deb
 rm sublime*.deb
 
-
-
-# need to relog in here
+# need to reboot here
+sudo reboot
 
 
