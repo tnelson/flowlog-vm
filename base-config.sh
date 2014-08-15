@@ -62,7 +62,8 @@ wget http://c758482.r82.cf2.rackcdn.com/sublime-text_build-3059_amd64.deb
 sudo dpkg -i sublime-text_build-3059_amd64.deb
 rm sublime*.deb
 
+# Turn off screensaver and locking
+echo -e "xset -dpms; xset s off" >> ~/.profile
+
 # need to reboot here
 sudo reboot
-
-
