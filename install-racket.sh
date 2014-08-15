@@ -24,3 +24,4 @@ source ~/.profile
 cd
 rm racket-5.3.6-src-unix.tgz
 
+# May need to run this in racket *before* building dependencies for IOS parser (require (planet murphy/protobuf:1:1))
