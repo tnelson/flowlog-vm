@@ -1,6 +1,8 @@
 
 cd
 
+sudo apt-get -y install thrift-compiler
+
 opam install -y extlib thrift yojson oasis
 
 sudo apt-get -y install protobuf-compiler
