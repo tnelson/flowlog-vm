@@ -7,6 +7,7 @@
 
 # Don't require a password on login
 sudo usermod -a -G nopasswdlogin `whoami`
+sudo usermod -a -G vboxsf `whoami`
 
 # Automatically login user flowlog (via config file being copied)
 sudo cp 50-flowlog.conf /etc/lightdm/lightdm.conf.d
