@@ -17,7 +17,7 @@ sudo make install
 cd python
 python setup.py build
 python setup.py test
-python setup.py install
+sudo python setup.py install
 
 
 cd
