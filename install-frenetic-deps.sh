@@ -8,7 +8,7 @@ sudo apt-get -y install m4
 # Will object to ocaml-text?
 opam update
 opam install -y base-unix base-threads base-bigarray ssl react lablgtk ocaml-text
-opam install -y cstruct lwt ocamlfind ocamlgraph ounit pa_ounit quickcheck
+opam install -y cstruct lwt ocamlfind ocaml-findlib ocamlgraph ounit pa_ounit quickcheck
 opam upgrade
 
 . /home/flowlog/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
